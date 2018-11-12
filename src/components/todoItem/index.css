@@ -1,0 +1,41 @@
+.todoItem {
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+.todoItem input {
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  vertical-align: middle;
+}
+.todoItem label {
+  display: inline-block;
+  line-height: 40px;
+  width: 80%;
+}
+.todoItem button {
+  float: right;
+  border: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.todoItem .edit {
+  width: 100%;
+  outline: none;
+  padding-left: 10px;
+  box-sizing: border-box;
+  height: 30px;
+}
+.through {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.hide {
+  display: none;
+}
