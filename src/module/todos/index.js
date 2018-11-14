@@ -5,7 +5,6 @@ import AddTodo from '../../components/addTodo/index'
 import TodoList from '../../components/todoList/index'
 
 class Todos extends Component {
-  
   render() {
     return (
       <div className="todos">
@@ -15,4 +14,4 @@ class Todos extends Component {
     );
   }
 }
-export default {actions, reducer, Todos};
+export {actions, reducer, Todos};

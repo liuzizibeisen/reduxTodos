@@ -1,48 +1,13 @@
-import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
-import {addTodo} from '../../module/todo/redux/actions.js';
-
+import React, {Component} from 'react';
+import './index.css'
 class AddTodo extends Component {
-
-  constructor(props, context) {
-    super(props, context);
-
-    this.onSubmit = this.onSubmit.bind(this);
-    this.refInput = this.refInput.bind(this);
-  }
-
-  onSubmit(ev) {
-    ev.preventDefault();
-
-    const input = this.input;
-    if (!input.value.trim()) {
-      return;
-    }
-
-    this.props.onAdd(input.value);
-    input.value = '';
-  }
-
-  refInput(node) {
-    this.input = node;
-  }
 
   render() {
     return (
-      <div className="add-todo">
-        <form onSubmit={this.onSubmit}>
-          <input className="new-todo" ref={this.refInput} />
-          <button className="add-btn" type="submit">
-            添加
-          </button>
-        </form>
+      <div className="addTodo">
+        <input className="addText" type="text" placeholder="What needs to be done?" />
       </div>
     )
   }
 }
-
-AddTodo.propTypes = {
-  onAdd: PropTypes.func.isRequired
-};
-
 export default AddTodo;

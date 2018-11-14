@@ -2,17 +2,26 @@ import React, { Component } from 'react';
 import * as actions from './redux/actions.js';
 import reducer from './redux/reducer.js';
 import { FilterTypes } from '../../constants.js'
+import './index.css'
 
 class Filters extends Component {
-  
   render() {
     return (
-      <div className="filters">
-        <a href='#all' filter={FilterTypes.ALL}>全部</a>
-        <a href='#completed' filter={FilterTypes.COMPLETED}>已完成</a>
-        <a href='#uncompleted' filter={FilterTypes.UNCOMPLETED}>未完成</a>
+      <div className='filterBox'>
+        <div className="leftTodos">
+          <span>{this.props.listLength} </span>
+          <span>items left</span>
+        </div>
+        <div className="filters">
+          <a className={`selectedState`} href='#all' filter={FilterTypes.ALL}>All</a>
+          <a href='#uncompleted' filter={FilterTypes.UNCOMPLETED}>Active</a>
+          <a href='#completed' filter={FilterTypes.COMPLETED}>Completed</a>
+        </div>
+        <div className="clearCompleted">
+          <span>Clear completed</span>
+        </div>
       </div>
     );
   }
 }
-export default {actions, reducer, Filters};
+export {actions, reducer, Filters};
