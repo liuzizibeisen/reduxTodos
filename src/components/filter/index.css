@@ -1,0 +1,17 @@
+.filtersItem a {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 5px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+  color: #666;
+}
+.filtersItem .selectedState {
+  border: 1px solid #ccc;
+}
+.filtersItem  a + a {
+  margin-left: 8px;
+}

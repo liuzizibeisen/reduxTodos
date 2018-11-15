@@ -1,15 +1,15 @@
-import {ADD_TODO, TOGGLE_TODO, REMOVE_TODO}from './actionTypes.js';
+import {ADD_TODO, TOGGLE_TODO, REMOVE_TODO, CLEAR_COMPLETED}from './actionTypes.js';
 
 export default (state = [], action) => {
   switch(action.type) {
     case ADD_TODO: {
       return [
+        ...state,
         {
           id: action.id,
           text: action.text,
           completed: false
-        },
-        ...state
+        }
       ]
     }
     case TOGGLE_TODO: {
@@ -24,6 +24,11 @@ export default (state = [], action) => {
     case REMOVE_TODO: {
       return state.filter((todoItem) => {
         return todoItem.id !== action.id;
+      })
+    }
+    case CLEAR_COMPLETED: {
+      return state.filter((todoItem) => {
+        return !todoItem.completed
       })
     }
     default: {

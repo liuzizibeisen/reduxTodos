@@ -4,14 +4,15 @@ import reducer from './redux/reducer.js';
 import AddTodo from '../../components/addTodo/index'
 import TodoList from '../../components/todoList/index'
 
-class Todos extends Component {
-  render() {
+class Todos extends Component{
+  render () {
     return (
       <div className="todos">
         <AddTodo />
         <TodoList />
       </div>
-    );
+    )
   }
 }
+
 export {actions, reducer, Todos};
