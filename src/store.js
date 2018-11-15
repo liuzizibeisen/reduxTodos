@@ -1,7 +1,7 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
 
-import {reducer as todoReducer} from './todos';
-import {reducer as filterReducer} from './filter';
+import {reducer as todoReducer} from './module/todos';
+import {reducer as filterReducer} from './module/filters';
 
 import Perf from 'react-addons-perf'
 
